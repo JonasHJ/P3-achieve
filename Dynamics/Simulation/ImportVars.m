@@ -11,8 +11,8 @@ Kp = 3.25^2;
 g = 9.815; % [m/s^2] gravity constant
 
 %======================================  link 1
-l1 = 0.065; % [m] length
-lc1 = 0.03167744; % [m] Center of Mass (in Z-direction)
+l1 = -0.065; % [m] length
+lc1 = -0.03167744; % [m] Center of Mass (in Z-direction)
 m1 = 0.18481027; % [kg] mass
 
 % Inertia tensor 1
