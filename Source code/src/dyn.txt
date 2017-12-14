@@ -1,0 +1,42 @@
+
+    B[i_11] = (i2_31*cos(th1)*cos(th2))/2 - (i2_11*cos(th1)*sin(th2))/2 + (i2_32*cos(th2)*sin(th1))/2 - (i2_12*sin(th1)*sin(th2))/2 + (i3_31*cos(th1)*cos(th2)*cos(th3))/2 - (i3_11*cos(th1)*cos(th2)*sin(th3))/2 - (i3_11*cos(th1)*cos(th3)*sin(th2))/2 + (i3_32*cos(th2)*cos(th3)*sin(th1))/2 - (i3_12*cos(th2)*sin(th1)*sin(th3))/2 - (i3_12*cos(th3)*sin(th1)*sin(th2))/2 - (i3_31*cos(th1)*sin(th2)*sin(th3))/2 - (i3_32*sin(th1)*sin(th2)*sin(th3))/2;
+    B[i_12] = (i3_31*cos(th1)*cos(th2)*cos(th3))/2 - (i3_11*cos(th1)*cos(th2)*sin(th3))/2 - (i3_11*cos(th1)*cos(th3)*sin(th2))/2 + (i3_32*cos(th2)*cos(th3)*sin(th1))/2 - (i3_12*cos(th2)*sin(th1)*sin(th3))/2 - (i3_12*cos(th3)*sin(th1)*sin(th2))/2 - (i3_31*cos(th1)*sin(th2)*sin(th3))/2 - (i3_32*sin(th1)*sin(th2)*sin(th3))/2;
+    B[i_13] = i3_21*cos(th1) + i3_22*sin(th1);
+
+    B[i_21] = (i2_12*cos(th1)*cos(th2))/2 - (i2_11*cos(th2)*sin(th1))/2 + (i2_32*cos(th1)*sin(th2))/2 - (i2_31*sin(th1)*sin(th2))/2 + (i3_12*cos(th1)*cos(th2)*cos(th3))/2 - (i3_11*cos(th2)*cos(th3)*sin(th1))/2 + (i3_32*cos(th1)*cos(th2)*sin(th3))/2 + (i3_32*cos(th1)*cos(th3)*sin(th2))/2 - (i3_12*cos(th1)*sin(th2)*sin(th3))/2 - (i3_31*cos(th2)*sin(th1)*sin(th3))/2 - (i3_31*cos(th3)*sin(th1)*sin(th2))/2 + (i3_11*sin(th1)*sin(th2)*sin(th3))/2;
+    B[i_22] = (i3_12*cos(th1)*cos(th2)*cos(th3))/2 - (i3_11*cos(th2)*cos(th3)*sin(th1))/2 + (i3_32*cos(th1)*cos(th2)*sin(th3))/2 + (i3_32*cos(th1)*cos(th3)*sin(th2))/2 - (i3_12*cos(th1)*sin(th2)*sin(th3))/2 - (i3_31*cos(th2)*sin(th1)*sin(th3))/2 - (i3_31*cos(th3)*sin(th1)*sin(th2))/2 + (i3_11*sin(th1)*sin(th2)*sin(th3))/2;
+    B[i_23] = 0;
+
+    B[i_31] = (i3_12*cos(th1)*cos(th2)*cos(th3))/2 - (i3_11*cos(th2)*cos(th3)*sin(th1))/2 + (i3_32*cos(th1)*cos(th2)*sin(th3))/2 + (i3_32*cos(th1)*cos(th3)*sin(th2))/2 - (i3_12*cos(th1)*sin(th2)*sin(th3))/2 - (i3_31*cos(th2)*sin(th1)*sin(th3))/2 - (i3_31*cos(th3)*sin(th1)*sin(th2))/2 + (i3_11*sin(th1)*sin(th2)*sin(th3))/2;
+    B[i_32] = (i3_12*cos(th1)*cos(th2)*cos(th3))/2 - (i3_11*cos(th2)*cos(th3)*sin(th1))/2 + (i3_32*cos(th1)*cos(th2)*sin(th3))/2 + (i3_32*cos(th1)*cos(th3)*sin(th2))/2 - (i3_12*cos(th1)*sin(th2)*sin(th3))/2 - (i3_31*cos(th2)*sin(th1)*sin(th3))/2 - (i3_31*cos(th3)*sin(th1)*sin(th2))/2 + (i3_11*sin(th1)*sin(th2)*sin(th3))/2;
+    B[i_33] = l2*lc3*m3*sin(th3);
+
+
+
+    C[i_11] = 0;
+    C[i_12] = (i2_21*cos(th1))/2 + (i3_21*cos(th1))/2 + (i2_22*sin(th1))/2 + (i3_22*sin(th1))/2;
+    C[i_13] = (i3_21*cos(th1))/2 + (i3_22*sin(th1))/2;
+
+    C[i_21] = (i3_13*cos(th2 + th3))/2 + (i3_33*sin(th2 + th3))/2 + (i2_13*cos(th2))/2 + (i2_33*sin(th2))/2 - (lc3^2*m3*sin(2*th2 + 2*th3))/2 - (l2^2*m3*sin(2*th2))/2 - (lc2^2*m2*sin(2*th2))/2 - l2*lc3*m3*sin(2*th2 + th3);
+    C[i_22] = 0;
+    C[i_23] = 0;
+
+    C[i_31] = (i3_13*cos(th2 + th3))/2 + (i3_33*sin(th2 + th3))/2 - (lc3^2*m3*sin(2*th2 + 2*th3))/2 + (l2*lc3*m3*sin(th3))/2 - (l2*lc3*m3*sin(2*th2 + th3))/2;
+    C[i_32] = l2*lc3*m3*sin(th3);
+    C[i_33] = 0;
+
+    const double M[9] =
+        {
+            i1_33 + i3_33*cos(th2 + th3) - i3_13*sin(th2 + th3) + (l2^2*m3)/2 + (lc2^2*m2)/2 + (lc3^2*m3)/2 + i2_33*cos(th2) - i2_13*sin(th2) - (lc3^2*m3*cos(2*th2 + 2*th3))/2 - (l2^2*m3*cos(2*th2))/2 - (lc2^2*m2*cos(2*th2))/2 + l2*lc3*m3*cos(th3) - l2*lc3*m3*cos(2*th2 + th3),
+            i2_23/2 + i3_23/2 + (i2_32*cos(th1)*cos(th2))/2 - (i2_12*cos(th1)*sin(th2))/2 - (i2_31*cos(th2)*sin(th1))/2 + (i2_11*sin(th1)*sin(th2))/2 + (i3_32*cos(th1)*cos(th2)*cos(th3))/2 - (i3_12*cos(th1)*cos(th2)*sin(th3))/2 - (i3_12*cos(th1)*cos(th3)*sin(th2))/2 - (i3_31*cos(th2)*cos(th3)*sin(th1))/2 + (i3_11*cos(th2)*sin(th1)*sin(th3))/2 + (i3_11*cos(th3)*sin(th1)*sin(th2))/2 - (i3_32*cos(th1)*sin(th2)*sin(th3))/2 + (i3_31*sin(th1)*sin(th2)*sin(th3))/2,
+            i3_23/2 + (i3_32*cos(th1)*cos(th2)*cos(th3))/2 - (i3_12*cos(th1)*cos(th2)*sin(th3))/2 - (i3_12*cos(th1)*cos(th3)*sin(th2))/2 - (i3_31*cos(th2)*cos(th3)*sin(th1))/2 + (i3_11*cos(th2)*sin(th1)*sin(th3))/2 + (i3_11*cos(th3)*sin(th1)*sin(th2))/2 - (i3_32*cos(th1)*sin(th2)*sin(th3))/2 + (i3_31*sin(th1)*sin(th2)*sin(th3))/2,
+
+
+            0,
+            m3*l2^2 + 2*m3*cos(th3)*l2*lc3 + m2*lc2^2 + m3*lc3^2 + i2_22*cos(th1) + i3_22*cos(th1) - i2_21*sin(th1) - i3_21*sin(th1),
+            m3*lc3^2 + l2*m3*cos(th3)*lc3 + i3_22*cos(th1) - i3_21*sin(th1),
+
+            0,
+            0,
+            m3*lc3^2 + i3_22*cos(th1) - i3_21*sin(th1)
+    };
