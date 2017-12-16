@@ -43,6 +43,7 @@ Fa = diff(Fv, t);
 
 % Here the trajectory is plotted into a figure.
 if(plot)
+    disp("Plotting trajectory.")
     subplot(3,1,1); fplot(F(1),[0 t_f]); hold on;
     title('Displacement'); xlabel('Time [s]'); ylabel('Displacement [rad]');
 
