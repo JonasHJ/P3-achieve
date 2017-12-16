@@ -1,4 +1,4 @@
-function [q, validSol, q_all] = crust_ikine( Pos )
+function [q, validSol, q_all] = crust_ikine_test( Pos )
 % This function takes the position of the end-effector as input and returns a nx3 matrix where n is 
 % possible solutions and 3 is number of joint
 % angles ordered as [theta1, theta2, theta3].
