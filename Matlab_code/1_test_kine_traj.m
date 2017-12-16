@@ -14,5 +14,9 @@ for i=1:size(q,1)
     pos_q = [T_q(1,4), T_q(2,4), T_q(3,4)];
 end
 
+% Trajectory test
 
-
+P1 = [0.2779, 0, 0.22]; % Home
+P2 = [0.33717, 0.35905, -0.03826]; % Mouth
+plot = 1; % 0 = don't plot, 1 = show plot
+crust_traj(P1, P2, 5, plot)
